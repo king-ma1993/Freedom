@@ -1,0 +1,2 @@
+include ':app', ':host', ':demo', ':plugin-lib', ':wanandroid', ':gradle-plugin', ':codegenerate', ':generatecode-module', ':plugin-core'
+rootProject.name='AndroidPlugin'

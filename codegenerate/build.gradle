@@ -1,0 +1,20 @@
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+
+dependencies {
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation 'org.javassist:javassist:3.22.0-GA'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compileOnly files("${System.getenv().get('ANDROID_HOME')}/platforms/android-${project.COMPILE_SDK_VERSION}/android.jar")
+
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../repo'))
+        pom.groupId = 'com.myl.freedom'
+        pom.artifactId = 'codegenerate'
+        pom.version = '1.0.0'
+    }
+}

@@ -1,0 +1,32 @@
+apply plugin: 'kotlin'
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url uri('../repo')
+        }
+
+    }
+
+    dependencies {
+        classpath files("${System.getenv().get('ANDROID_HOME')}/platforms/android-${project.COMPILE_SDK_VERSION}/android.jar")
+        classpath 'com.myl.freedom:codegenerate:1.0.0'
+    }
+}
+
+task('generateProxyCode') {
+    group = 'build'
+    description = '生成代理类'
+    def outputDir = new File(project.buildDir, "generated/GenerateProxyCode")
+    doFirst {
+        outputDir.deleteDir()
+    }
+    doLast {
+//        com.myl.codegenerate.ProxyActivityGenerator codeGenerator = new com.myl.codegenerate.ProxyActivityGenerator()
+//        codeGenerator.generate(outputDir)
+    }
+
+
+
+}

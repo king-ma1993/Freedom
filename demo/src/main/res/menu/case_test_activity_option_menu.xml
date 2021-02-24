@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/icon1"
+        android:icon="@drawable/collapse"
+        android:title="标题一"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/icon2"
+        android:title="标题一"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/icon3"
+        android:icon="@drawable/collapse"
+        android:title="标题一"
+        app:showAsAction="never" />
+</menu>

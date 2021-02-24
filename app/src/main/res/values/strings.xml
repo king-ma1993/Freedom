@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidPlugin</string>
+
+    <string name="installPluginFromAssets">安装并运行插件</string>
+    <string name="add_fragment">添加fragment</string>
+    <string name="local_test_contentProvider">测试contentProvider</string>
+</resources>

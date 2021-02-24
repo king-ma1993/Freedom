@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myl.demo">
+
+    <application
+        android:name=".PluginDemoApp"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PluginDemoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DemoTestActivity"
+            ></activity>
+        <activity android:name=".activity.TestActivityLifecycle"></activity>
+        <activity android:name=".activity.TestActivityOptionMenu"></activity>
+        <activity android:name=".activity.TestActivityOrientation"></activity>
+        <activity android:name=".activity.TestActivityReCreate"></activity>
+        <activity android:name=".activity.TestActivityBundle"></activity>
+        <activity android:name=".activity.TestActivitySetTheme"></activity>
+        <activity android:name=".activity.TestViewActivity"></activity>
+        <activity android:name=".receiver.TestPluginReceiverActivity"></activity>
+        <activity android:name=".dialog.TestPluginDialogActivity"></activity>
+
+
+        <activity android:name=".fragment.PluginFragmentActivity"></activity>
+        <activity android:name=".fragment.TestPluginFragmentActivity"></activity>
+        <activity android:name=".fragment.TestXmlFragmentActivity"></activity>
+        <activity android:name=".packagemg.PackageManagerActivity"></activity>
+        <activity android:name=".fragment.TestDialogFragmentActivity"></activity>
+        <activity
+            android:name=".activity.TestActivityWindowSoftMode"
+            android:windowSoftInputMode="stateVisible"></activity>
+        <activity android:name=".activity.TestAppCompatActivityOnCreate"
+            android:theme="@style/Theme.AppCompat"></activity>
+        <activity android:name=".service.TestServiceActivity"></activity>
+        <service android:name=".service.TestPluginService"></service>
+
+        <receiver android:name="com.myl.demo.receiver.TestStaticReceiver">
+            <intent-filter>
+                <action android:name="com.myl.demo.receiver.action.testDynamic" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

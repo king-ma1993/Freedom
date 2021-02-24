@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PluginDemoActivity">
+
+    <Button
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/test_add_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_oncreate" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_add_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_xml_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_activity_menu" />
+
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_xml_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_orientation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_orientation" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_orientation"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_recreate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_recreate" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_recreate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_recreatebysystem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_recreatebysystem" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_recreatebysystem"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_activity_theme"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_activity_theme" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_activity_theme"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_windowSoftInputMode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_windowSoftInputMode" />
+
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_windowSoftInputMode"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_appcompatactivity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_appcompatactivity" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/test_appcompatactivity"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/test_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="@string/test_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

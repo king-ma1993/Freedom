@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//import com.myl.codegenerate.ProxyActivityGenerator
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    sourceSets {
+//        main.java.srcDirs += project(':codegenerate').buildDir.path + '/generated/DelegateCode/activity_container'
+//    }
+
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.1'
+    provided project(path: ':plugin-lib')
+    api project(path: ':plugin-core')
+
+//    implementation project(path: ':codegenerate')
+
+}
+
+allprojects {
+    ext.COMPILE_SDK_VERSION = 29
+    ext.MIN_SDK_VERSION = 14
+}
+
+
+//task('generateProxyCode'){
+//    group = 'build'
+//    description = '生成代理类'
+//    def outputDir = new File(project.buildDir, "generated/GenerateProxyCode")
+//    doFirst {
+//        outputDir.deleteDir()
+//    }
+//    doLast {
+//        ProxyActivityGenerator codeGenerator = new ProxyActivityGenerator()
+//        codeGenerator.generate(outputDir)
+//    }
+//
+//}
+
+preBuild.dependsOn(project(":generatecode-module").getTasksByName("generateProxyCode", false).first())

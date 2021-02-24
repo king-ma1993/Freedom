@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myl.plugin_core">
+
+
+    <application>
+        <activity
+            android:name="com.myl.plugin_core.activity.SingleInstanceContainerActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.myl.plugin_core.activity.SingleTaskContainerActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.myl.plugin_core.activity.SingleTopContainerActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.myl.plugin_core.activity.StandardContainerActivity" />
+
+        <service
+            android:name=".manager.client.PluginManagerService"
+            android:process=":pluginserver"/>
+
+<!--        <service android:name="com.myl.plugin_core.service.ContainerService" />-->
+    </application>
+
+</manifest>
